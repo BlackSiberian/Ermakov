@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{777E80F6-2D08-474A-A622-9D70337FABBD}</ProjectGuid>
+    <ProjectGuid>{3084D0C1-EFE3-4447-8E84-AAD98D4AFD01}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>HelloWorld</RootNamespace>
+    <RootNamespace>Slice</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,6 +77,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="slice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="slice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
