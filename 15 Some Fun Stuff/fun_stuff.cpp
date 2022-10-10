@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
 #include <map>
-// Программа рекомендующая фильм, звезду и песню при регистрации
+
 using namespace std;
-// Функция получения номера фильма
+
 int getMovie(string s) {
     return int(s[0]);
 }
-// Функция получения номера звезды
+
 int getVip(string s) {
     return int(s[0]);
 }
-// Функция нахождения суммы цифр числа
+
 int sum(int x) {
     int y = 0;
     while (x) {
@@ -20,44 +20,45 @@ int sum(int x) {
     }
     return y;
 }
-// Фунция получения номера песни
+
 int getMusic(int a, int b, int c) {
     int num = sum(a) + sum(b) + sum(c);
     if (sum(num) >= 10) return sum(sum(num));
     else return sum(num);
 }
-// Объявление структуры пользователя
+
 struct person {
-    int day = 0, month = 0, year = 0;
+    int day, month, year;
     string name, surname;
 };
-// Тело функции
+
 int main() {
   person human;
   string s, d;
-    int c = 0;
+  int c = 0;
   bool f = false;
-    // Считывание имени и фамилии
   cout << "Hey, we have some fun content for you. Enter yor name and surname" << endl;
-  cin >> s;
+  getline(cin, s);
   for (char i: s)
     if (i != ' ') {
       if (!f) human.name += i;
       else human.surname += i;
     } else f = true;
-  // Считывание даты рождения
+  human.day = 0;
+  human.month = 0;
+  human.year = 0;
   cout << "Date of birth in the format dd.mm.yyyy" << endl;
-  cin >> d;
+    getline(cin, d);
     for (char i: d)
       if (i != '.') {
         if (c == 0) human.day = human.day * 10 + int(i) - 48;
         else if (c == 1) human.month = human.month * 10 + int(i) - 48;
         else human.year = human.year * 10 + int(i) - 48;
       } else c++;
-    // Создание таблицы фильмов
+    
     map <int, string> movie;
     movie[0] = "The Intouchables";
-    movie[1] = "The wolf of Wall Street";
+    movie[1] = "The Wolf of Wall Street";
     movie[2] = "Blade Runner 2048";
     movie[3] = "Fight club";
     movie[4] = "Forrest Gump";
@@ -82,7 +83,7 @@ int main() {
     movie[23] = "Kill Bill";
     movie[24] = "Once Upon a Time in America";
     movie[25] = "Blade Runner 2048";
-    // Создание таблицы звезд
+    
     map <int, string> vip;
     vip[0] = "Robert Downey, Jr.";
     vip[1] = "Tom Cruise";
@@ -110,7 +111,7 @@ int main() {
     vip[23] = "Robert Pattinson";
     vip[24] = "Jude Law";
     vip[25] = "Russell Crowe";
-    // Создание таблицы песен
+    
     map <int, string> music;
     music[0] = "B.o.B, Jessie J - Price Tag";
     music[1] = "Grimes - Kill V. Maim";
@@ -122,11 +123,12 @@ int main() {
     music[7] = "Bastille - Pompeii";
     music[8] = "Brick + Mortar - Locked in a Cage";
     music[9] = "Falling In Reverse - The Drug Nn Me Is You";
-    // Итоговый вывод рекоммендаций
-    if (human.day <= 31 && human.month <= 12 && human.year < 1900 && human.year > 2022)
+    
+    if (human.day <= 31 && human.month <= 12 && human.year > 1900 && human.year < 2022)
       cout << "Super! Your movie for today is " << movie[getMovie(human.name) - 65] << ", star"
                                                                                        " " << vip[getVip(human.surname) - 65] << ". Musical composition for "
                                                                                                                            "you: " << music[getMusic(human.day, human.month, human.year)] << endl;
-  else cout << "You entered the wrong date of birth" << endl;
+  else cout << "You entered the wrong date of birth " << endl;
+  cin.get();
   return 0;
 }
