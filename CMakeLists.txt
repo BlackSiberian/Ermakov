@@ -17,9 +17,10 @@ set(
         #"14 Hanoi Tower/hanoi.cpp"
         #"15 Some Fun Stuff/fun_stuff.cpp"
         #"16 3D Matrix/3D Matrix.cpp"
-        "17 Neuron/main.cpp" "17 Neuron/neuron.cpp" "17 Neuron/neuron.h"
+        #"17 Neuron/main.cpp" "17 Neuron/neuron.cpp" "17 Neuron/neuron.h"
         #"18 Swap/swap.cpp"
         #"19 Sorting/sorting.cpp"
+        "20 Rectangle Intersection/main.cpp" "20 Rectangle Intersection/rectangle.cpp" "20 Rectangle Intersection/rectangle.h"
         )
 
 set(build_dir "Test")
