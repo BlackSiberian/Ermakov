@@ -20,7 +20,8 @@ set(
         #"17 Neuron/main.cpp" "17 Neuron/neuron.cpp" "17 Neuron/neuron.h"
         #"18 Swap/swap.cpp"
         #"19 Sorting/sorting.cpp"
-        "20 Rectangle Intersection/main.cpp" "20 Rectangle Intersection/rectangle.cpp" "20 Rectangle Intersection/rectangle.h"
+        #"20 Rectangle Intersection/main.cpp" "20 Rectangle Intersection/rectangle.cpp" "20 Rectangle Intersection/rectangle.h"
+        "21 Data Structure/main.cpp" "21 Data Structure/Structure.h" "21 Data Structure/LIFO.h" "21 Data Structure/LIFO.cpp" "21 Data Structure/FIFO.h" "21 Data Structure/FIFO.cpp"
         )
 
 set(build_dir "Test")
