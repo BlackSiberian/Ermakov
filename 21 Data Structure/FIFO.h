@@ -1,15 +1,14 @@
 #pragma once
 
-#include "Structure.h"
+#include "CStructure.h"
 
+template <class T>
 class FIFO : public Structure {
 public:
-    FIFO(int* array);
+    FIFO(T* array);
     ~FIFO();
 
-    void push(int x);
-    int pop();
-private:
-    int *queue;
+    void push(T element) final;
+    T pop() final;
 };
 
