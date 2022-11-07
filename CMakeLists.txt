@@ -21,7 +21,7 @@ set(
         #"18 Swap/swap.cpp"
         #"19 Sorting/sorting.cpp"
         #"20 Rectangle Intersection/main.cpp" "20 Rectangle Intersection/rectangle.cpp" "20 Rectangle Intersection/rectangle.h"
-        "21 Data Structure/main.cpp" "21 Data Structure/CStructure.h" "21 Data Structure/LIFO.h" "21 Data Structure/LIFO.cpp" "21 Data Structure/FIFO.h" "21 Data Structure/FIFO.cpp" "21 Data Structure/templates.cpp"
+        "21-22 Data Structure/main.cpp" "21-22 Data Structure/CStructure.h" "21-22 Data Structure/LIFO.h" "21-22 Data Structure/LIFO.cpp" "21-22 Data Structure/FIFO.h" "21-22 Data Structure/FIFO.cpp" "21-22 Data Structure/templates.cpp"
         )
 
 set(build_dir "Test")
